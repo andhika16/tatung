@@ -5,19 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Tatung</title>
+    <!-- font style goes here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
+<!-- end font styles -->
+        <title>Tatung</title>
 </head>
 <body>
-    <header>
-        <div class="flex justify-center items-center border-bottom">
-            <nav class="w-3/4 flex justify-between p-2 items-center">
-                <div class="title">
+    <header >
+        <div class="fixed bg-white border-2  w-full flex items-center justify-center">
+            <nav class="flex w-full justify-around p-2 items-center">
+                <div class="">
                     <a href="">
-                        <span class="text-3xl">Pemdes Tatung</span>
+                        <span class="text-2xl font-bold">Pemdes Tatung</span>
                     </a>
                 </div>
                 <div  class="w-2/4">
-                    <ul class=" flex justify-between text-xl" >
+                    <ul class=" flex justify-between text-md" >
                         <li class=" p-2 m-1">
                             <a href="">
                                 <span>Home</span>
@@ -34,6 +39,11 @@
                         </a>
                         </li>
                         <li class=" p-2 m-1">
+                            <a href="">
+                            <span>Desa</span>
+                        </a>
+                        </li>
+                        <li class=" p-2 m-1">
                         <a href="">
                             <span>Daftar</span>
                         </a>
@@ -42,22 +52,22 @@
                 </div>
             </nav>
         </div>
-        <section class="bg-green-500 bg-opacity-50 flex flex-col  justify-center items-center " >
-        <div>
-            <div class="flex flex-col justify-center items-center max-w-6xl h-80">
-                <div class="container">
-                    <h1 class="text-4xl font-bold">Sistem Informasi Pemerintah Desa Tatung</h1>
+        <section class="bg-cover flex flex-col justify-center items-center" style="background-image: url('/public/img/banner.jpg');" >
+        <div class="flex flex-col max-w-full">
+            <div class="flex flex-col justify-center items-center h-96" >
+                <div class="container text-white">
+                    <h1 class="text-4xl font-bold ">Sistem Informasi Pemerintah Desa Tatung</h1>
                     <p class="mt-5"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores repellat voluptates ea pariatur beatae fugiat qui laboriosam at corporis eius ipsam voluptatum inventore eaque dolores vel, velit, optio eveniet officia tempora, quia culpa. Maxime debitis porro animi? Enim esse iste sed nesciunt harum, sunt necessitatibus iure incidunt vero sint sequi!<strong>#umpoponorogojaya</strong></p>
                 </div>
                 </div>
-                <div class="bg-green-500 flex-col rounded-xl -mb-48">
-                    <div class="flex items-center p-5 m-5">
+                <div class="container bg-green-600 p-5 flex-col rounded-xl -mb-28 text-white">
+                    <div class="flex items-center">
                         <h3>Tatung</h3>
                         <p>Akses Ke desa</p>
                     </div>
-                    <div class="md:flex  justify-between p-5 m-5">
-                        <h1 class="max-w-lg text-5xl">Lorem ipsum, dolor sit amet consectetur</h1>
-                        <div class="flex-col items-center ">
+                    <div class="flex justify-between items-center" >
+                        <h1 class="max-w-lg text-4xl font-bold">Lorem ipsum, dolor sit amet consectetur</h1>
+                        <div class="flex-col items-center">
                             <span class="flex items-center ">
                                 <span class="bg-white h-0 w-0 p-3 m-2 rounded-full"></span>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
@@ -72,9 +82,9 @@
                             </span>
                         </div>
                     </div>
-                    <div class="md:flex md:m-2 justify-between p-5 m-5">
+                    <div class="md:flex md:m-2 justify-between">
                         <p class="max-w-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. At quod quia omnis quibusdam velit, sequi quasi magnam pariatur rerum beatae.</p>
-                        <button class="bg-white px-8 rounded"> Selengkapnya</button>
+                        <button class="bg-white px-8 rounded text-black"> Selengkapnya</button>
                     </div>
             </div>
         </div>
@@ -82,43 +92,23 @@
         </header>
         <div class="container mx-auto mt-60">
             <section>
-                <div class="flex flex-wrap justify-center">
-                    <div class="flex flex-col w-64 p-5 m-3 shadow-md">
+                <div class="flex flex-wrap justify-around">
+                    <div class="flex flex-col sm:max-w-full lg:w-72 xl:max-w-xs p-5 m-3 rounded shadow-xl">
                             <span class="bg-indigo-900 h-0 w-0 p-6 m-2 rounded-full"></span>
                         <h1 class="text-lg font-bold">Bantuan Subsidi Upah</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis quasi neque commodi voluptatem deleniti veniam?</p>
                     </div>
-                    <div class="flex flex-col w-64 p-5 m-3 shadow-md">
+                    <div class="flex flex-col sm:max-w-full lg:w-72 xl:max-w-xs p-5 m-3 rounded shadow-xl">
                             <span class="bg-indigo-900 h-0 w-0 p-6 m-2 rounded-full"></span>
                         <h1 class="text-lg font-bold">Bantuan Subsidi Upah</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis quasi neque commodi voluptatem deleniti veniam?</p>
                     </div>
-                    <div class="flex flex-col w-64 p-5 m-3 shadow-md">
+                    <div class="flex flex-col sm:max-w-full lg:w-72 xl:max-w-xs p-5 m-3 rounded shadow-xl">
                             <span class="bg-indigo-900 h-0 w-0 p-6 m-2 rounded-full"></span>
                         <h1 class="text-lg font-bold">Bantuan Subsidi Upah</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis quasi neque commodi voluptatem deleniti veniam?</p>
                     </div>
-                    <div class="flex flex-col w-64 p-5 m-3 shadow-md">
-                            <span class="bg-indigo-900 h-0 w-0 p-6 m-2 rounded-full"></span>
-                        <h1 class="text-lg font-bold">Bantuan Subsidi Upah</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis quasi neque commodi voluptatem deleniti veniam?</p>
-                    </div>
-                    <div class="flex flex-col w-64 p-5 m-3 shadow-md">
-                            <span class="bg-indigo-900 h-0 w-0 p-6 m-2 rounded-full"></span>
-                        <h1 class="text-lg font-bold">Bantuan Subsidi Upah</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis quasi neque commodi voluptatem deleniti veniam?</p>
-                    </div>
-                    <div class="flex flex-col w-64 p-5 m-3 shadow-md">
-                            <span class="bg-indigo-900 h-0 w-0 p-6 m-2 rounded-full"></span>
-                        <h1 class="text-lg font-bold">Bantuan Subsidi Upah</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis quasi neque commodi voluptatem deleniti veniam?</p>
-                    </div>
-                    <div class="flex flex-col w-64 p-5 m-3 shadow-md">
-                            <span class="bg-indigo-900 h-0 w-0 p-6 m-2 rounded-full"></span>
-                        <h1 class="text-lg font-bold">Bantuan Subsidi Upah</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis quasi neque commodi voluptatem deleniti veniam?</p>
-                    </div>
-                    <div class="flex flex-col w-64 p-5 m-3 shadow-md">
+                    <div class="flex flex-col sm:max-w-full lg:w-72 xl:max-w-xs p-5 m-3 rounded shadow-xl">
                             <span class="bg-indigo-900 h-0 w-0 p-6 m-2 rounded-full"></span>
                         <h1 class="text-lg font-bold">Bantuan Subsidi Upah</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis quasi neque commodi voluptatem deleniti veniam?</p>
@@ -128,14 +118,15 @@
 
 
 
-            <section class="flex justify-center ">
-                <div class="p-4 m-2">
-                    <div class="max-w-md">
-                                <h1 class="text-5xl">Informasi Seputar Berita Desa Tatung</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam enim adipisci quia provident atque quae quisquam eos, ea sapiente exercitationem?</p>
-                            </div>
+            <section class="mt-32">
+                <div class="max-w-full max-h-full">
+                <div class="max-w-lg">
+                    <h1 class="text-5xl font-bold">Informasi Seputar Berita Desa Tatung</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam enim adipisci quia provident atque quae quisquam eos, ea sapiente exercitationem?</p>
+                </div>
+                
                     <div class="col my-5">
-                    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-7xl">
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
                         <div class="md:flex">
                           <div class="md:flex-shrink-0">
                             <img class="h-48 w-full object-cover md:h-full md:w-48" src="/public/img/desa.tatung_1___B8VDOGDgJmK___.jpg" alt="Man looking at item at a store">
@@ -150,7 +141,7 @@
                       </div>
                     </div>
                     <div class="col my-5">
-                    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-7xl">
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
                         <div class="md:flex">
                           <div class="md:flex-shrink-0">
                             <img class="h-48 w-full object-cover md:h-full md:w-48" src="/public/img/desa.tatung_2___CDiLYHHAELS___.jpg" alt="Man looking at item at a store">
@@ -164,7 +155,7 @@
                       </div>
                     </div>
                     <div class="col my-5">
-                    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-7xl">
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
                         <div class="md:flex">
                           <div class="md:flex-shrink-0">
                             <img class="h-48 w-full object-cover md:h-full md:w-48" src="/public/img/desa.tatung___B0xELpWByX7___.jpg" alt="Man looking at item at a store">
@@ -177,13 +168,11 @@
                         </div>
                       </div>
                     </div>
+                    </div>
                 </div>
             </section>
             <section class="flex justify-center">
-
-                <div class="p-4 m-2">
-
-                        
+                <div class="p-4 m-2 max-w-xl">
                         <div class="flex justify-center my-10">
                             <div class="m-2">
                                 <div class="w-46 bg-white rounded-xl shadow-md overflow-hidden ">
@@ -231,9 +220,10 @@
                             </div>
                         </div>
                 </div>
+                </div>
+
             </section>
         </div>
 
-    </div>
 </body>
 </html>
