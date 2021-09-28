@@ -14,46 +14,60 @@
 </head>
 <body>
     <header >
-        <div class="fixed bg-white border-2  w-full flex items-center justify-center">
-            <nav class="flex w-full justify-around p-2 items-center">
-                <div class="">
-                    <a href="">
-                        <span class="text-2xl font-bold">Pemdes Tatung</span>
-                    </a>
+        <div class="fixed w-full">
+            <nav class="bg-white shadow-lg">
+                <div class="max-w-full mx-auto px-4">
+                    <div class="flex justify-between">
+                        <div class="flex space-x-7">
+                            <div>
+                                <!-- Website Logo -->
+                                <a href="#" class="flex items-center py-4 px-2">
+                                    <span class="font-semibold text-gray-500 text-lg">Navigation</span>
+                                </a>
+                            </div>
+                            <!-- Primary Navbar items -->
+                            <div class="hidden md:flex items-center space-x-1">
+                                <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Home</a>
+                                <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Services</a>
+                                <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">About</a>
+                                <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contact Us</a>
+                            </div>
+                        </div>
+                        <!-- Secondary Navbar items -->
+                        <div class="hidden md:flex items-center space-x-3 ">
+                            <a href="" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Log In</a>
+                            <a href="" class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">Sign Up</a>
+                        </div>
+                        <!-- Mobile menu button -->
+                        <div class="md:hidden flex items-center">
+                            <button class="outline-none mobile-menu-button">
+                            <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+                                x-show="!showMenu"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                        </div>
+                    </div>
                 </div>
-                <div  class="w-2/4">
-                    <ul class=" flex justify-between text-md" >
-                        <li class=" p-2 m-1">
-                            <a href="">
-                                <span>Home</span>
-                            </a>
-                        </li>
-                        <li class=" p-2 m-1">
-                            <a href="">
-                            <span>About</span>
-                        </a>
-                        </li>
-                        <li class=" p-2 m-1">
-                            <a href="">
-                            <span>Contact</span>
-                        </a>
-                        </li>
-                        <li class=" p-2 m-1">
-                            <a href="">
-                            <span>Desa</span>
-                        </a>
-                        </li>
-                        <li class=" p-2 m-1">
-                        <a href="">
-                            <span>Daftar</span>
-                        </a>
-                        </li>
+                <!-- mobile menu -->
+                <div class="hidden mobile-menu">
+                    <ul class="">
+                        <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
+                        <li><a href="#services" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Services</a></li>
+                        <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About</a></li>
+                        <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a></li>
                     </ul>
                 </div>
-            </nav>
         </div>
         <section class="bg-cover flex flex-col justify-center items-center" style="background-image: url('/public/img/banner.jpg');" >
-        <div class="flex flex-col max-w-full">
+        <div class="flex flex-col md:max-w-full">
             <div class="flex flex-col justify-center items-center h-96" >
                 <div class="container text-white">
                     <h1 class="text-4xl font-bold ">Sistem Informasi Pemerintah Desa Tatung</h1>
@@ -65,9 +79,11 @@
                         <h3>Tatung</h3>
                         <p>Akses Ke desa</p>
                     </div>
-                    <div class="flex justify-between items-center" >
-                        <h1 class="max-w-lg text-4xl font-bold">Lorem ipsum, dolor sit amet consectetur</h1>
-                        <div class="flex-col items-center">
+                    <div class="md:flex md:my-4 justify-between items-center" >
+                        <div>
+                            <h1 class="max-w-xl text-4xl font-bold">Lorem ipsum, dolor sit amet consectetur</h1>
+                        </div>
+                        <div class="flex-col items-center ">
                             <span class="flex items-center ">
                                 <span class="bg-white h-0 w-0 p-3 m-2 rounded-full"></span>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
@@ -82,7 +98,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="md:flex md:m-2 justify-between">
+                    <div class="md:flex justify-between">
                         <p class="max-w-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. At quod quia omnis quibusdam velit, sequi quasi magnam pariatur rerum beatae.</p>
                         <button class="bg-white px-8 rounded text-black"> Selengkapnya</button>
                     </div>
@@ -224,6 +240,13 @@
 
             </section>
         </div>
+<script>
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
 
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+</script>
 </body>
 </html>
