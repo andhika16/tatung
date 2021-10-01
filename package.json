@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build-css": "tailwindcss -i ./src/stlyes.css -o ./public/styles.css",
+    "build-css": "tailwindcss -i ./public/src/stlyes.css -o ./public/styles.css",
     "watch-css": "tailwindcss -o public/styles.css --watch",
     "script": "nodemon app.js"
   },
