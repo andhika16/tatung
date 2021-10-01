@@ -1,14 +1,14 @@
  
-        <section class="bg-cover flex flex-col justify-center items-center pt-20 md:p-0 md:-mx-12" style="background-image:url('/img/banner.jpg') ;" >
-            <div class="bg-gradient-to-r from-blue-900  flex flex-col max-w-xl md:max-w-7xl p-3 ">
+        <section class="bg-cover md:p-0 " style="background-image:url('/img/banner.jpg') ;" >
+            <div class="flex flex-col max-w-xl md:max-w-7xl px-5">
                 <div class="flex flex-col justify-center items-center h-1/2 md:h-96 md:p-0" >
-                    <div class="container text-white">
-                        <h1 class="text-5xl md:text-4xl md:font-bold ">Sistem Informasi Pemerintah Desa Tatung</h1>
+                    <div class="container text-white pt-20 ">
+                        <h1 class="text-4xl md:font-bold ">Sistem Informasi Pemerintah Desa Tatung</h1>
                         <p class="mt-5"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores repellat voluptates ea pariatur beatae fugiat qui laboriosam at corporis eius ipsam voluptatum inventore eaque dolores vel, velit, optio eveniet officia tempora, quia culpa. Maxime debitis porro animi? Enim esse iste sed nesciunt harum, sunt necessitatibus iure incidunt vero sint sequi!<strong>#umpoponorogojaya</strong></p>
                     </div>
                 </div>
-                    <div class="container bg-cover bg-top p-5 flex-col rounded-xl -mb-56 mt-5  md:-mb-28 text-white"
-                    style="background-image:url('/img/banner2.png') ;"
+                    <div class="container bg-cover bg-top md:max-w-5xl p-5 flex-col md:mx-auto rounded-xl -mb-56 mt-5  md:-mb-28 text-white"
+                    style="background-image:url('/img/ba.jpg') ;"
                     >
                         <div class="flex justify-between items-center mb-5">
                             <h3>Tatung</h3>
@@ -44,7 +44,7 @@
       
 
 
-<div class="container md:max-w-7xl mx-auto p-5"></div>
+<div class="container md:max-w-5xl mx-auto p-5">
 
     <section class="mt-60 md:mt-36">
         <div class="max-w-full max-h-full px-5 md:p-0">
@@ -81,14 +81,14 @@
     <div class="grid grid-cols-2 gap-3 md:grid-cols-4">
         <% data.forEach(e => { %>
             <div class="flex flex-col items-center md:max-w-xs p-5 m-1 text-center rounded shadow-lg">
-                    <span class="bg-indigo-900 h-0 w-0 p-6 m-2 rounded-full"></span>
+                    <span class="bg-green-600 h-0 w-0 p-6 m-2 rounded-full"></span>
                 <h1 class="text-lg font-bold"> <%= e.judul  %> </h1>
                 <p class="hidden md:block"><%= e.body %></p>
             </div>
         <% }) %> 
 
     </div>
-    <div class="mt-10">
+    <div class="mt-10 mx-1 md:mx-0">
         <button class="bg-gray-200 p-2 w-full">Lihat menu lainya</button>
     </div>
 </section>
