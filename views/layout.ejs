@@ -15,12 +15,15 @@
 <body>
         <%- include('partials/navbar')  %>     
 
-        <div class="container md:max-w-7xl md:mx-auto md:p-4 text-center md:text-left">
+        <div class="container md:mx-auto md:max-w-7xl  text-center md:text-left">
 
                 <%- body %> 
         </div>
 
         <%- include('partials/footer') %> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="script.js"></script>
 <script>
     const btn = document.querySelector("button.mobile-menu-button");
     const menu = document.querySelector(".mobile-menu");
@@ -29,7 +32,6 @@
         menu.classList.toggle("hidden");
     });
 
-    
 
 </script>
 </body>
