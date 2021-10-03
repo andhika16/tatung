@@ -131,11 +131,13 @@
 
     <div class="grid grid-cols-2 gap-3 md:grid-cols-4">
         <% data.forEach(e => { %>
-            <div class="flex flex-col items-center md:max-w-xs p-5 m-1 text-center border  hover:shadow-lg">
-                    <span class="bg-green-600 h-0 w-0 p-6 m-2 rounded-full"></span>
+            <a class="flex flex-col items-center md:max-w-xs p-5 m-1 text-center border  hover:shadow-lg" href="#">
+                    <span class="bg-green-200 p-5 w-20 rounded-full">
+                        <img src="<%= e.icon %>" alt="">
+                    </span>
                 <h1 class="text-lg font-bold"> <%= e.judul  %> </h1>
-                <p class="hidden md:block"><%= e.body %></p>
-            </div>
+                <p class="hidden md:block text-sm text-gray-500"><%= e.body %></p>
+            </a>
         <% }) %> 
 
     </div>

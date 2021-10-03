@@ -373,7 +373,7 @@ ul {
  */
 
 html {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   /* 1 */
   line-height: 1.5;
   /* 2 */
@@ -22419,7 +22419,7 @@ video {
 }
 
 .font-sans {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .text-xs {
@@ -54040,7 +54040,7 @@ video {
   }
 
   .sm\:font-sans {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Nunito Sans", sans-serif;
   }
 
   .sm\:text-xs {
@@ -85309,7 +85309,7 @@ video {
   }
 
   .md\:font-sans {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Nunito Sans", sans-serif;
   }
 
   .md\:text-xs {
@@ -116578,7 +116578,7 @@ video {
   }
 
   .lg\:font-sans {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Nunito Sans", sans-serif;
   }
 
   .lg\:text-xs {
@@ -147847,7 +147847,7 @@ video {
   }
 
   .xl\:font-sans {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Nunito Sans", sans-serif;
   }
 
   .xl\:text-xs {
@@ -179116,7 +179116,7 @@ video {
   }
 
   .\32xl\:font-sans {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Nunito Sans", sans-serif;
   }
 
   .\32xl\:text-xs {

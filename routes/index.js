@@ -3,35 +3,43 @@ const route = require('express').Router();
 
 const data = [
     {
-        judul: 'bantuan ipsum dolor',
+        icon : '/img/icons/family-room.png',
+        judul: 'Layanan Kartu Keluarga',
         body : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?'
     },
     {
-        judul: 'bantuan ipsum dolor',
+        icon : '/img/icons/id-card.png',
+        judul: 'Layanan KTP',
         body : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?'
     },
     {
-        judul: 'bantuan ipsum dolor',
+        icon : '/img/icons/certificate.png',
+        judul: 'Layanan Sertifikat Tanah',
         body : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?'
     },
     {
-        judul: 'bantuan ipsum dolor',
+        icon : '/img/icons/contract.png',
+        judul: 'Layanan Hak Kepemilikan',
         body : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?'
     },
     {
-        judul: 'bantuan ipsum dolor',
+        icon : '/img/icons/house.png',
+        judul: 'Layanan Surat Pindah',
         body : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?'
     },
     {
-        judul: 'bantuan ipsum dolor',
+        icon : '/img/icons/document.png',
+        judul: 'Layanan Akta Kelahiran',
         body : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?'
     },
     {
-        judul: 'bantuan ipsum dolor',
+        icon : '/img/icons/bank.png',
+        judul: 'Layanan Pemerintah Desa',
         body : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?'
     },
     {
-        judul: 'bantuan ipsum dolor',
+        icon : '/img/icons/agreement.png',
+        judul: 'Layanan Bantuan Surat Desa',
         body : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?'
     }
 ]

@@ -8,6 +8,7 @@
 5. mengganti background header menjadi paralayang (solved tpi belum desa tatung)
 6. mengganti background bawah header menjadi biru
 7. responsive pada section hasil pertanian masih belum bisa auto flex-col dan flex-wrap
+8. coba navbar gradient
 
 
 

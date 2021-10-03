@@ -3,7 +3,8 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      'sans': ['"IBM Plex Sans"', 'sans-serif']
+      // 'sans': ['"IBM Plex Sans"', 'sans-serif'],
+      'sans': ['"Nunito Sans"', 'sans-serif']
     },
     backgroundColor: theme => ({
       ...theme('colors'),
