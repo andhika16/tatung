@@ -6,7 +6,8 @@
   "scripts": {
     "build-css": "tailwindcss -i ./public/src/stlyes.css -o ./public/styles.css",
     "watch-css": "tailwindcss -o public/styles.css --watch",
-    "script": "nodemon app.js"
+    "script": "nodemon app.js",
+    "json:server":"json-server --watch db.json"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.1",
     "hbs": "^4.1.2",
+    "json-server": "^0.16.3",
     "nodemon": "^2.0.13"
   }
 }

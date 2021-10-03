@@ -1,84 +1,33 @@
 const route = require('express').Router();
 
+fetch('http://localhost:3000/layanan', async () => {
 
-const data = [
-    {
-        icon : '/img/icons/family-room.png',
-        judul: 'Layanan Kartu Keluarga',
-        body : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?'
-    },
-    {
-        icon : '/img/icons/id-card.png',
-        judul: 'Layanan KTP',
-        body : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?'
-    },
-    {
-        icon : '/img/icons/certificate.png',
-        judul: 'Layanan Sertifikat Tanah',
-        body : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?'
-    },
-    {
-        icon : '/img/icons/contract.png',
-        judul: 'Layanan Hak Kepemilikan',
-        body : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?'
-    },
-    {
-        icon : '/img/icons/house.png',
-        judul: 'Layanan Surat Pindah',
-        body : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?'
-    },
-    {
-        icon : '/img/icons/document.png',
-        judul: 'Layanan Akta Kelahiran',
-        body : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?'
-    },
-    {
-        icon : '/img/icons/bank.png',
-        judul: 'Layanan Pemerintah Desa',
-        body : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?'
-    },
-    {
-        icon : '/img/icons/agreement.png',
-        judul: 'Layanan Bantuan Surat Desa',
-        body : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quaerat?'
-    }
-]
+})
 
-
-const berita = [
-    {
-        gambar:'/img/desa.tatung_1___B8VDOGDgJmK___.jpg',
-        tanggal:'9 FEBRUARI 2020',
-        judul: 'Pembangunan Batas Sungai Desa Tatung',
-        isi : 'Gotong royong sandaran bekerja Masyarakat dukuh tatung lor bekerja bakti penggalian pipa Pamsimas'
-    },
-    {
-        gambar:"/img/desa.tatung_2___CDiLYHHAELS___.jpg",
-        tanggal:"6 Agustus 2020",
-        judul: "Penutupan Kegiatan KKN",
-        isi : "Kegiatan kkn dalam rangka pengembangan parawisata paralayang desa tatung."
-    },
-    {
-        gambar:"/img/desa.tatung___B0xELpWByX7___.jpg",
-        tanggal:"5 AGUSTUS 2019",
-        judul: "Peresmian PARALAYANG LIGA JATIM SERI 2" ,
-        isi : 'Pemerintah Desa Tatung mengucapkan selamat kepada Panitia PARALAYANG LIGA JATIM SERI 2 yaitu Karang Taruna Desa Tatung "Taruna Hebat" telah berhasil dan sukses menyelenggarakan event Liga Paralayang Jawa Timur.'
-    },
-    {
-        gambar:"/img/desa.tatung___B0xELpWByX7___.jpg",
-        tanggal:"5 AGUSTUS 2019",
-        judul: "Peresmian PARALAYANG LIGA JATIM SERI 2" ,
-        isi : 'Pemerintah Desa Tatung mengucapkan selamat kepada Panitia PARALAYANG LIGA JATIM SERI 2 yaitu Karang Taruna Desa Tatung "Taruna Hebat" telah berhasil dan sukses menyelenggarakan event Liga Paralayang Jawa Timur.'
-    },
-]
+const berita 
 
 
 
 route.get('/', (req, res) => {
+
+
+
+
     res.render('beranda', {
         title: 'Pemdes tatung',
         data,
         berita
+    });
+});
+route.get('/profil', (req, res) => {
+    res.render('profil', {
+        title: 'Profil Desa'      
+    })    
+})
+route.get('/layanan', (req, res) => {
+    res.render('layanan', {
+        title: 'Layanan Publik Desa Tatung',
+        data
     });
 });
 
