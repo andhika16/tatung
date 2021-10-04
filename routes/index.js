@@ -26,6 +26,22 @@ route.get('/layanan-halaman', async (req, res) => {
 });
 
 
+route.get('/berita', async (req, res) => {
+    const fetchBerita = await fetch('http://localhost:3000/berita')
+    const berita = await fetchBerita.json() 
+    res.render('berita', {
+        title: 'Kabar Desa',
+        berita
+        
+    })
+})
+
+
+route.get('/berita/:id', async (req, res) => {
+    const id = req.body.id
+
+    
+})
 
 
 

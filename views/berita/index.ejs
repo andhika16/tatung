@@ -1,0 +1,28 @@
+<section class="flex-col justify-center md:pb-96 md:pt-14 max-w-full">
+    <div class="max-w-xl flex justify-center">
+        <div class="my-10 max-w-lg text-left">
+            <h1 class="text-3xl font-bold mb-2">Hasil Pertanian Desa Tatung</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa officiis et ipsum quidem nesciunt aliquam Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laudantium esse laborum?</p>
+        </div>
+    </div>
+
+    <div class="md:mx-0 md:flex md:flex-wrap justify-center md:max-h-4xl bg-gray-200">
+            <% berita.forEach(e => { %>
+                <div class="bg-white shadow overflow-hidden m-2 mb-5 md:max-w-sm">
+                    <a href="#">
+                    <div class="flex-col">
+                        <div class="md:flex-shrink-0">
+                            <img class="h-48 w-full object-cover md:h-56 md:w-full" src="<%= e.gambar %>"  alt="Man looking at item at a store">
+                        </div>
+                        <div class="p-8 ">
+                            <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold border-l-lg border-green"> <%= e.tanggal %> </div>
+                            <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline"><%= e.judul %></a>
+                            <p class="mt-2 text-gray-500"><%= e.subJudul %></p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <% }) %> 
+    </div>
+</section>
+
