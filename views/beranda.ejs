@@ -80,40 +80,18 @@
                     <h1 class="text-white font-bold" >Web Update</h1>
                 </div>
                 <div class="text-black text-left divide-y divide-black" >
-
+                    <% berita.forEach(e => { %> 
                     <div class="my-3  py-2">
                         <span>
                             <h1 class="text-lg font-bold my-2 border-green-500 border-l-4 px-2">12 SEPTEMBER 2021</h1>
 
                             <a href="" class="text-black text-sm hover:text-gray-900">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores reiciendis ex, repellendus deserunt placeat eos.
+                                <%= e.judul %> 
                             </a>
                         </span>
                     </div>
-                    <div class="my-3  py-2" >
-                        <span>
-                            <h1 class="text-lg font-bold my-2 border-green-500 border-l-4 px-2">12 SEPTEMBER 2021</h1>
-                            <a href="" class="text-black text-sm hover:text-gray-900">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores reiciendis ex, repellendus deserunt placeat eos.
-                            </a>
-                        </span>
-                    </div>
-                    <div class="my-3  py-2" >
-                        <span>
-                            <h1 class="text-lg font-bold my-2 border-green-500 border-l-4 px-2">12 SEPTEMBER 2021</h1>
-                            <a href="" class="text-black text-sm hover:text-gray-900">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores reiciendis ex, repellendus deserunt placeat eos.
-                            </a>
-                        </span>
-                    </div>
-                    <div class="my-3  py-2" >
-                        <span>
-                            <h1 class="text-lg font-bold my-2 border-green-500 border-l-4 px-2">12 SEPTEMBER 2021</h1>
-                            <a href="" class="text-black text-sm hover:text-gray-900">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores reiciendis ex, repellendus deserunt placeat eos.
-                            </a> 
-                        </span>
-                    </div>
+                    <% }) %> 
+                    
                 </div>
             </div>
             </div>
@@ -130,7 +108,7 @@
     </div>
 
     <div class="grid grid-cols-2 gap-3 md:grid-cols-4">
-        <% data.forEach(e => { %>
+        <% layanan.forEach(e => { %>
             <a class="flex flex-col items-center md:max-w-xs p-5 m-1 text-center border  hover:shadow-lg" href="#">
                     <span class="bg-green-200 p-5 w-20 rounded-full">
                         <img src="<%= e.icon %>" alt="">
