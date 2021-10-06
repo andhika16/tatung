@@ -6,9 +6,9 @@ const fetch = require('cross-fetch');
 
 
 route.get('/', async (req, res) => {
-    const fetchBerita = await fetch('http://localhost:3000/berita')
+    const fetchBerita = await fetch('http://localhost:8000/berita')
     const berita = await fetchBerita.json()  
-    const fetchLayanan = await fetch('http://localhost:3000/layanan?limit=5')
+    const fetchLayanan = await fetch('http://localhost:8000/layanan?limit=5')
     const layanan = await fetchLayanan.json()
 
     res.render('beranda', {
@@ -19,7 +19,7 @@ route.get('/', async (req, res) => {
 });
 
 route.get('/layanan', async (req, res) => {
-    const fetchLayanan = await fetch('http://localhost:3000/layanan')
+    const fetchLayanan = await fetch('http://localhost:8000/layanan')
     const layanan = await fetchLayanan.json()
 
     res.render('layanan', {
@@ -32,7 +32,7 @@ route.get('/layanan', async (req, res) => {
 route.get('/layanan/:id', async (req, res) => {
     const id = req.params.id
     console.log(id);
-    const fetchLayanan = await fetch(`http://localhost:3000/layanan/${id}`)
+    const fetchLayanan = await fetch(`http://localhost:8000/layanan/${id}`)
     const layanan = await fetchLayanan.json()
     res.render('layanan/layanan-page', {
         title: 'Layanan Publik Desa Tatung',
@@ -45,7 +45,7 @@ route.get('/layanan/:id', async (req, res) => {
 
 
 route.get('/berita', async (req, res) => {
-    const fetchBerita = await fetch('http://localhost:3000/berita')
+    const fetchBerita = await fetch('http://localhost:8000/berita')
     const berita = await fetchBerita.json() 
     res.render('berita', {
         title: 'Kabar Desa',
