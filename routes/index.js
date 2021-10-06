@@ -55,11 +55,11 @@ route.get('/berita', async (req, res) => {
 })
 
 
-route.get('/berita/:id', async (req, res) => {
-    const id = req.body.id
+// route.get('/berita/:id', async (req, res) => {
+//     const id = req.body.id
 
     
-})
+// })
 
 
 
