@@ -6,7 +6,7 @@
   "scripts": {
     "build-css": "tailwindcss -i ./public/src/stlyes.css -o ./public/styles.css",
     "watch-css": "tailwindcss -o public/styles.css --watch",
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "json:server": "json-server --watch db.json"
   },
   "keywords": [],
