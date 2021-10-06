@@ -1,16 +1,19 @@
 "use strict"
 
-require('dotenv').config()
+const dotenv = require('dotenv');
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000
-const expresslayout = require('express-ejs-layouts');
 const path = require('path');
-
-app.listen(port, () => {
-    console.log(`server running port : ${port}`);
+const PORT = process.env.PORT || 3000
+const expresslayout = require('express-ejs-layouts');
+app.listen(PORT, () => {
+    console.log(`server running port : ${PORT}`);
 });
 
+
+dotenv.config({
+    path: './config/config.env'
+})
 // layout
 app.set('view engine', 'hbs');
 app.use(expresslayout);
