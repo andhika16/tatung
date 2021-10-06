@@ -1,7 +1,6 @@
 {
   "name": "tatung",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "build-css": "tailwindcss -i ./public/src/stlyes.css -o ./public/styles.css",
@@ -14,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.3.5",
+    "nodemon": "^2.0.13",
     "postcss": "^8.3.7",
     "tailwindcss": "^2.2.15"
   },
@@ -23,7 +23,15 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.1",
-    "hbs": "^4.1.2",
-    "nodemon": "^2.0.13"
-  }
+    "hbs": "^4.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andhika16/tatung.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andhika16/tatung/issues"
+  },
+  "homepage": "https://github.com/andhika16/tatung#readme",
+  "description": ""
 }

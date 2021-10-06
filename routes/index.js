@@ -31,7 +31,6 @@ route.get('/layanan', async (req, res) => {
 
 route.get('/layanan/:id', async (req, res) => {
     const id = req.params.id
-    console.log(id);
     const fetchLayanan = await fetch(`http://localhost:8000/layanan/${id}`)
     const layanan = await fetchLayanan.json()
     res.render('layanan/layanan-page', {
