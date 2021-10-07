@@ -8,7 +8,9 @@
     "start": "node app.js",
     "json:server": "json-server --watch db.json --port 8000"
   },
-  "keywords": [],
+  "keywords": [
+    "json-server,heroku, node, REST API"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {

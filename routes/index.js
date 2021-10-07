@@ -6,11 +6,11 @@ const fetch = require('cross-fetch');
 
 
 route.get('/', async (req, res) => {
-    const fetchBerita = await fetch('http://localhost:8000/berita')
+    const fetchBerita = await fetch('https://pemdes-tatung-json.herokuapp.com/berita')
     const berita = await fetchBerita.json()  
-    const fetchLayanan = await fetch('http://localhost:8000/layanan?limit=5')
+    const fetchLayanan = await fetch('https://pemdes-tatung-json.herokuapp.com/layanan')
     const layanan = await fetchLayanan.json()
-    res.status(statusCode >= 100 && statusCode < 600 ? err.code : 500);
+    
     res.render('beranda', {
         title: 'Pemdes tatung',
         berita,
@@ -19,7 +19,7 @@ route.get('/', async (req, res) => {
 });
 
 route.get('/layanan', async (req, res) => {
-    const fetchLayanan = await fetch('http://localhost:8000/layanan')
+    const fetchLayanan = await fetch('https://pemdes-tatung-json.herokuapp.com/layanan')
     const layanan = await fetchLayanan.json()
 
     res.render('layanan', {
@@ -31,7 +31,7 @@ route.get('/layanan', async (req, res) => {
 
 route.get('/layanan/:id', async (req, res) => {
     const id = req.params.id
-    const fetchLayanan = await fetch(`http://localhost:8000/layanan/${id}`)
+    const fetchLayanan = await fetch(`https://pemdes-tatung-json.herokuapp.com/layanan/${id}`)
     const layanan = await fetchLayanan.json()
     res.render('layanan/layanan-page', {
         title: 'Layanan Publik Desa Tatung',
@@ -44,7 +44,7 @@ route.get('/layanan/:id', async (req, res) => {
 
 
 route.get('/berita', async (req, res) => {
-    const fetchBerita = await fetch('http://localhost:8000/berita')
+    const fetchBerita = await fetch('https://pemdes-tatung-json.herokuapp.com/berita')
     const berita = await fetchBerita.json() 
     res.render('berita', {
         title: 'Kabar Desa',
