@@ -49,54 +49,7 @@
 <div class="container md:max-w-6xl mx-auto p-5">
 <!-- Berita -->
     <section class="mt-60 md:mt-36">
-        <div class="max-w-full max-h-full px-5 md:p-0">
-            <div class="max-w-lg">
-                <h1 class="text-3xl font-bold">Informasi Seputar Berita Desa Tatung</h1>
-                <p class="my-8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam enim adipisci quia provident atque quae quisquam eos, ea sapiente exercitationem?</p>
-            </div>
-            <!-- Berita -->
-            <div class="md:flex">
-                <div class="flex-1 max-h-4xl overflow-x-hidden">
-            <% berita.forEach(e => { %>
-                <div class="bg-white overflow-hidden mb-5 ">
-                    <a href="/berita/ <%= e.id %>"">
-                        <div class="md:flex">
-                        <div class="md:flex-shrink-0 ">
-                            <img class="h-48 w-full object-cover md:h-full md:w-48 transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-110" src="<%= e.gambar %>"  alt="Man looking at item at a store">
-                        </div>
-                        <div class="p-8">
-                            <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold"> <%= e.tanggal %> </div>
-                            <a href="/berita/<%= e.id %>"   class="block mt-1 text-lg leading-tight font-medium text-black hover:underline"><%= e.judul %></a>
-                        </div>
-                        </div>
-                    </a>
-                </div>
-                <% }) %> 
-            </div>
-
-            <!-- TODO:membuat pagination untuk berita -->
-
-            <div class="mx-4 flex-shrink-0 md:w-80">
-                <div class="bg-green-500 text-left shadow p-2">
-                    <h1 class="text-white font-bold" >Web Update</h1>
-                </div>
-                <div class="text-black text-left divide-y divide-black" >
-                    <% berita.forEach(e => { %> 
-                    <div class="my-3  py-2">
-                        <span>
-                            <h1 class="text-lg font-bold my-2 border-green-500 border-l-4 px-2">12 SEPTEMBER 2021</h1>
-
-                            <a href="/berita/<%= e.id %>" class="text-black text-sm hover:text-gray-900">
-                                <%= e.judul %> 
-                            </a>
-                        </span>
-                    </div>
-                    <% }) %> 
-                    
-                </div>
-            </div>
-            </div>
-        </div>
+       
     </section>
 
 
