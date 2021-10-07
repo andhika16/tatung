@@ -10,7 +10,7 @@ route.get('/', async (req, res) => {
     const berita = await fetchBerita.json()  
     const fetchLayanan = await fetch('http://localhost:8000/layanan?limit=5')
     const layanan = await fetchLayanan.json()
-
+    res.status(statusCode >= 100 && statusCode < 600 ? err.code : 500);
     res.render('beranda', {
         title: 'Pemdes tatung',
         berita,
