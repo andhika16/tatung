@@ -11,5 +11,8 @@
 8. coba navbar gradient
 
 
+* tugas baru
 
+membuat admin panel untuk profil desa tatung
+mengubah penyimpanan ke mongodb
 

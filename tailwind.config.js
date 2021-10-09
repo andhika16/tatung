@@ -17,7 +17,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extends: {
+      backgroundColor: ['active', 'hover', 'focus'],
+    }
   },
   plugins: [],
 }

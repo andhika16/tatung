@@ -15,24 +15,19 @@
 <body>
         <%- include('partials/navbar')  %>     
 
+        <% if(title === "Pemdes tatung") {%>
+                <div></div>
+        <% }else { %>  
+        <div class="bg-gradient-to-r from-green-500 to-green-800  md:p-7 ">
+        </div>
+        <% } %> 
         <div class="container mx-auto md:max-w-7xl  text-center md:text-left">
-
                 <%- body %> 
         </div>
 
         <%- include('partials/footer') %> 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="script.js"></script>
-<script>
-    const btn = document.querySelector("button.mobile-menu-button");
-    const menu = document.querySelector(".mobile-menu");
+<script src="/script.js"></script>
 
-    btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-    });
-
-
-</script>
 </body>
 </html>

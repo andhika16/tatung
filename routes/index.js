@@ -10,12 +10,22 @@ route.get('/', async (req, res) => {
     const berita = await fetchBerita.json()  
     const fetchLayanan = await fetch('https://pemdes-tatung-json.herokuapp.com/layanan')
     const layanan = await fetchLayanan.json()
-    
+   
     res.render('beranda', {
         title: 'Pemdes tatung',
         berita,
-        layanan
+        layanan,
     });   
+});
+
+
+route.get('/berita/:id', (req, res) => {
+    const id = req.params.id
+    console.log(id);
+    res.send(`hello world ${id}`)
+    // res.render('berita/berita-page', {
+    //     title: 'Berita Desa Tatung'
+    // });
 });
 
 route.get('/layanan', async (req, res) => {
@@ -41,8 +51,6 @@ route.get('/layanan/:id', async (req, res) => {
 
 
 
-
-
 route.get('/berita', async (req, res) => {
     const fetchBerita = await fetch('https://pemdes-tatung-json.herokuapp.com/berita')
     const berita = await fetchBerita.json() 
@@ -53,12 +61,6 @@ route.get('/berita', async (req, res) => {
     })
 })
 
-
-// route.get('/berita/:id', async (req, res) => {
-//     const id = req.body.id
-
-    
-// })
 
 
 

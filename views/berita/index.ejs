@@ -12,7 +12,7 @@
                             </div>
                             <div class="py-5">
                                 <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold border-l-lg border-green"> <%= e.tanggal %> </div>
-                                <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline"><%= e.judul %></a>
+                                <a href="/berita/<%= e.id %>" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline"><%= e.judul %></a>
                                 <p class="hidden md:block mt-2 text-sm text-gray-500"><%= e.subJudul %></p>
                             </div>
                         </div>
@@ -22,7 +22,7 @@
             </div>
             <div class="md:mx-4 md:max-w-xs">
                 <div class="bg-green-500 text-left shadow p-2">
-                    <h1 class="text-white font-bold" >Web Update</h1>
+                    <h1 class="text-white font-bold" >Berita Lainya</h1>
                 </div>
                 <div class="text-black text-left divide-y divide-black" >
                     <% berita.forEach(e => { %> 
