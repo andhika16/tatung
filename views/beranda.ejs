@@ -48,25 +48,26 @@
 
 <div class="container md:max-w-6xl mx-auto p-5">
 <!-- Berita -->
-    <section class="mt-60 md:mt-36">
+    <section class="mt-60 md:mt-36 text-left">
         <div class="max-w-full max-h-full px-5 md:p-0">
             <div class="max-w-lg">
                 <h1 class="text-3xl font-bold">Informasi Seputar Berita Desa Tatung</h1>
                 <p class="my-8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam enim adipisci quia provident atque quae quisquam eos, ea sapiente exercitationem?</p>
             </div>
             <!-- Berita -->
-            <div class="md:flex">
-                <div class="flex-1 max-h-4xl overflow-x-hidden">
+            <div class="md:flex ">   
+                <div class="flex-1 max-h-4xl overflow-x-hidden flex-grow">
             <% berita.forEach(e => { %>
                 <div class="bg-white overflow-hidden mb-5 ">
-                    <a href="/berita/ <%= e.id %>"">
+                    <a href="/berita/ <%= e.id %>">
                         <div class="md:flex">
-                        <div class="md:flex-shrink-0 ">
-                            <img class="h-48 w-full object-cover md:h-full md:w-48 transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-110" src="<%= e.gambar %>"  alt="Man looking at item at a store">
+                        <div class="md:w-60 md:h-">
+                            <img class="h-48 w-full object-cover md:h-full md:w-full" src="<%= e.gambar %>"  alt="">
                         </div>
-                        <div class="p-8">
+                        <div class="py-5 md:px-8">
                             <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold"> <%= e.tanggal %> </div>
-                            <a href="/berita/<%= e.id %>"   class="block mt-1 text-lg leading-tight font-medium text-black hover:underline"><%= e.judul %></a>
+                            <a href="/berita/<%= e.id %>" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline"><%= e.judul %></a>
+                                <p class="text-gray-500 text-sm" ><%= e.subJudul %></p>
                         </div>
                         </div>
                     </a>
@@ -76,7 +77,7 @@
 
             <!-- TODO:membuat pagination untuk berita -->
 
-            <div class="mx-4 flex-shrink-0 md:w-80">
+            <div class="md:mx-4  flex-shrink md:w-80">
                 <div class="bg-green-500 text-left shadow p-2">
                     <h1 class="text-white font-bold" >Web Update</h1>
                 </div>
@@ -114,8 +115,10 @@
                     <span class="bg-green-200 p-5 w-20 rounded-full">
                         <img src="<%= e.icon %>" alt="">
                     </span>
-                <h1 class="text-lg font-bold"> <%= e.judul  %> </h1>
-                <p class="hidden md:block text-sm text-gray-500"><%= e.body %></p>
+                    <span class="p-2">
+                        <h1 class="text-lg font-bold"> <%= e.judul  %> </h1>
+                        <p class="hidden md:block text-sm text-gray-500"><%= e.body %></p>
+                    </span>
             </a>
         <% }) %> 
 
