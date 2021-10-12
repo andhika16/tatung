@@ -1,15 +1,17 @@
 const route = require('express').Router();
-const fetch = require('cross-fetch');
+const fetchData = require('../config/fetchData');
 
-// TODO:membuat reusable function agar tidak mengulang penulisan fetch
+
+
+
+
 
 
 
 route.get('/', async (req, res) => {
-    const fetchBerita = await fetch('https://pemdes-tatung-json.herokuapp.com/berita')
-    const berita = await fetchBerita.json()  
-    const fetchLayanan = await fetch('https://pemdes-tatung-json.herokuapp.com/layanan')
-    const layanan = await fetchLayanan.json()
+ 
+    const berita = await fetchData('berita').then(data => data)
+    const layanan = await fetchData('layanan').then(data => data)
    
     res.render('beranda', {
         title: 'Pemdes tatung',
@@ -19,21 +21,24 @@ route.get('/', async (req, res) => {
 });
 
 
-route.get('/berita/:id', (req, res) => {
+route.get('/berita/:id', async (req, res) => {
     const id = req.params.id
-    console.log(id);
-    res.send(`hello world ${id}`)
-    // res.render('berita/berita-page', {
-    //     title: 'Berita Desa Tatung'
-    // });
+    const berita = await fetchData('berita',id).then(data => data)
+
+    res.render('berita/berita-page', {
+        title: 'Berita Desa Tatung',
+        subTitle: 'Informasi Terkini Seputar Desa Tatung',
+        berita
+    });
 });
 
 route.get('/layanan', async (req, res) => {
-    const fetchLayanan = await fetch('https://pemdes-tatung-json.herokuapp.com/layanan')
-    const layanan = await fetchLayanan.json()
+    const layanan = await fetchData('layanan').then(data => data)
+
 
     res.render('layanan', {
         title: 'Layanan Publik Desa Tatung',
+        subTitle:'Infomasi Pelayanan Desa Tatung',
         layanan
     });
 });
@@ -41,10 +46,11 @@ route.get('/layanan', async (req, res) => {
 
 route.get('/layanan/:id', async (req, res) => {
     const id = req.params.id
-    const fetchLayanan = await fetch(`https://pemdes-tatung-json.herokuapp.com/layanan/${id}`)
-    const layanan = await fetchLayanan.json()
+    const layanan = await fetchData('layanan',id).then(data => data)
+
     res.render('layanan/layanan-page', {
         title: 'Layanan Publik Desa Tatung',
+        subTitle : 'Informasi Layanan Publik desa Tatung',
         layanan
     });
 });
@@ -52,10 +58,11 @@ route.get('/layanan/:id', async (req, res) => {
 
 
 route.get('/berita', async (req, res) => {
-    const fetchBerita = await fetch('https://pemdes-tatung-json.herokuapp.com/berita')
-    const berita = await fetchBerita.json() 
+    const berita = await fetchData('berita').then(data => data)
+
     res.render('berita', {
         title: 'Kabar Desa',
+        subTitle:'Informasi Kabar Desa Tatung',
         berita
         
     })

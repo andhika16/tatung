@@ -1,16 +1,25 @@
 const route = require('express').Router();
 
-route.get('/', (req, res) => {
+
+
+
+
+route.get('/', async (req, res) => {
     res.render('profil', {
-        title: 'Profil Desa'
+        title: 'Profil Desa',
+        subTitle: 'informasi Tentang Desa Tatung'
+        
     });
 });
 
 
-route.get('/profil-geografis',  (req, res) => {
+route.get('/profil-geografis', (req, res) => {
+    
+
     res.render('profil/geografis', {
         title: 'Profil Geografis',
-        subTitle: 'Informasi Geografis Desa tatung'
+        subTitle: 'Informasi Geografis Desa tatung',
+        layanan
     });
 });
 

@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const express = require('express');
 const app = express();
 const path = require('path');
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 const expresslayout = require('express-ejs-layouts');
 const jsonServer = require('json-server');
@@ -36,8 +36,8 @@ app.use(express.urlencoded({
 }))
 
 
-app.use('/profil', require('./routes/profil'))
 app.use('/', require('./routes/index'))
+app.use('/profil', require('./routes/profil'))
 
 
 
